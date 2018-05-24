@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://cluster41-files.instructure.com/courses/9870~109/files/9870~6374/course%20files/unit_vue/profile.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Profile</title>
+  </head>
+  <body cz-shortcut-listen="true">
+
+    <div id="app">
+      <img v-bind:src="picture">
+      <h2>{{ name }}</h2>
+      <p>{{ city }}</p>
+      <p>{{ phone }}</p>
+      <p>{{ email }}</p>
+      <ul>
+        <li v-for="x in hobbies">
+        {{ x.text }}   <button v-on:click="deleteHobby(x)">Delete</button>
+        </li>
+      </ul>
+      <button v-on:click="newHobby">Add hobby</button>
+      <button v-on:click="fetchRandomUser()">Random User</button>
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+
+
+</body></html>
